@@ -1,0 +1,296 @@
+body{
+    background: url(../img/background.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.absolute{
+    position: absolute;
+    width: 17%;
+    height: auto;
+    margin-top: 25%;
+    margin-left: 8%;
+}
+
+.absolute2{
+    position: absolute;
+    width: 17%;
+    height: auto;
+    margin-top: 25%;
+    margin-left: 72%;
+}
+
+/* .line{
+    border: 2px solid #F15A29;
+    border-radius: 10px;
+    background: transparent;
+    height: 98.5vh;
+} */
+
+.sizeLogo{
+    margin: 20px;
+    width: 370px;
+}
+
+.sizePara{
+    color: #ffffff;
+    font-size: 17px;
+    margin-bottom: 0px;
+}
+
+.sizePourcent{
+    font-size: 50px;
+    padding-top: 20px;
+}
+
+.shadow{
+    text-shadow: 3px 3px 5px #F15A29;
+}
+
+.weight{
+    font-weight: bold;
+}
+
+#win{
+    height: 50px;
+}
+
+.colorOrange{
+    color: #F15A29;
+}
+
+.flexBox1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.img{
+    width: 100px;
+    height: 100px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.flexBox2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#droppable{
+    width: 165px;
+    height: 165px;
+    float: left; 
+    margin-right: 10px;
+    border: 2px solid #F15A29;
+    border-radius: 35px;
+    background: #333333;
+    box-shadow: inset 29px 29px 58px #1f1f1f, 
+                inset -29px -29px 58px #474747;
+}
+
+.light{
+    color: #ffffff;
+}
+
+.ui-state-highlight{
+    color: #f15a29;
+}
+
+.box2{
+    width: 165px;
+    height: 165px;
+    border: 2px solid #F15A29;
+    margin: 10px;
+    border-radius: 35px;
+    background: #333333;
+    box-shadow: inset 29px 29px 58px #1f1f1f, 
+                inset -29px -29px 58px #474747;
+}
+
+.sizeDiv{
+    font-size: 20px;
+    height: 20px;
+
+}
+
+.btnReglesOrigins{
+    height: auto;
+    border-radius: 20px;
+    color: #F15A29;
+    font-size: 20px;
+    border: 2px solid #F15A29;
+    outline-style: none;
+    cursor: pointer;
+    background-image: linear-gradient( to right, transparent 50%, #f15a29 50%, #f7a943);
+    background-size: 200%;
+    margin-right: 10px;
+}
+
+.btnReglesOrigins:hover{
+    color: #ffffff;
+    background-position: 100%;
+    border: 2px solid #ffffff;
+    transition: 0.3s ease-out;
+}
+
+.end{
+    justify-content: flex-end;     
+}
+
+/* Modale Thomas Origine : */
+#modaleOrigin, #modaleRules{
+    background-color: #333333;
+    border-radius: 15px;
+}
+.modalTitle{
+    color: #F15A29;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.modalBigTitle{
+    color: #F15A29;
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.buttonReturn{
+    color: #F15A29;
+}
+.par{
+    padding: 10px;
+}
+
+@media screen and (max-width: 460px){
+
+    /* .line{
+        border: 1px solid #F15A29;
+    } */
+
+    .sizeLogo{
+        margin-top: 30px;
+        margin-bottom: 10px;
+        width: 275px;
+        height: auto;
+    }
+
+    .sizePara{
+        font-size: 12px;
+    }
+    .h1{
+        font-size: 20px;
+    }
+
+    .h3{
+        font-size: 15px;
+    }
+
+    .h7{
+        font-size: 9px !important; 
+    }
+
+    .sizePourcent{
+        font-size: 40px;
+    }
+    .rem{
+        margin-top: 25px;
+    }
+    
+    .rem3{
+        margin-top: 3rem !important;
+    }
+
+    .sizeIcone{
+        width: 95px;
+        height: 95px;
+        margin: 10px;
+    }
+
+    #droppable{
+        width: 130px;
+        height: 130px;
+        /* border: 1px solid #F15A29; */
+    }
+
+    .center{
+        margin-top: 60%;
+        transform: translateY(50%);
+        font-size: 10px;
+    }
+    
+    .box2{
+        width: 130px;
+        height: 130px;
+        /* border: 1px solid #F15A29; */
+    }
+
+    .btnReglesOrigins{
+        color: #ffffff;
+        background: #F15A29;
+        border: 2px solid #f15a29;
+        outline-style: none;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .btnPadding{
+        width: 80px;
+        margin: 10px !important;
+        padding: 5px !important;
+    }
+
+    .btn2Padding{
+        width: 80px;
+        margin: 10px !important;
+        padding: 5px !important;
+    }
+
+    .rem6{
+        margin-top: 6rem !important;
+    }
+
+    .end{
+        justify-content: center; 
+    }
+
+    /* Modale Thomas Origine : */
+#modaleOrigin{
+    background-color: #333333;
+}
+
+.modalTitle{
+    color: #F15A29;
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+.modalBigTitle{
+    color: #F15A29;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+.buttonReturn{
+    color: #F15A29;
+}
+.par{
+    padding: 10px;
+}
+
+.absolute{
+    display: none;
+}
+
+.absolute2{
+    display: none;
+}
+
+}

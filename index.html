@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>SHIFUMI</title>
+</head>
+
+<body>
+    <img class="absolute" src="assets/img/ninja1.png" alt="">
+    <img class="absolute2" src="assets/img/ninja2.png" alt="">
+    <div class="container-fluid">
+        <div class="row p-1">
+            <div id="containment-wrapper" class=" col-12 line">
+                <!-- Début partie Logo & phrase d'accroche -->
+                <header class="container text-center">
+                    <img src="assets/img/logo_ombré.png" class="col-10 col-md-6   sizeLogo" alt="logoShifumi">
+                    <p class="col-12 text-center sizePara">
+                        Pierre ? Feuille ? Ou ciseaux ? Qui de l'Homme ou de la machine s'imposera ?
+                    </p>
+                </header>
+                <!-- Fin partie Logo & phrase d'accroche -->
+                <!-- Début de la partie compteur -->
+                <div class="container-fluid rem">
+                    <div class="row  text-center">
+                        <div class="col-4 col-md-4">
+                            <div class="text-white h3 mt-3 shadow">JOUEUR</div>
+                            <div id="win" class="colorOrange h1 weight">0</div>
+                        </div>
+                        <div id="pourcent" class="col-4 col-md-4 text-white sizePourcent rem">
+                        </div>
+                        <div class="col-4 col-md-4">
+                            <div class="text-white h3 mt-3 shadow">ORDINATEUR</div>
+                            <div id="lose" class="colorOrange h1 weight">0</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin de la partie compteur -->
+                <!-- Début de la partie PiFeCi -->
+                <div class="flexBox1">
+                    <div class="icone"><img src="assets/img/cisors.PNG.png" alt="" class="img"></div>
+                    <div class="icone"><img src="assets/img/paper.PNG.png" alt="" class="img"></div>
+                    <div class="icone"><img src="assets/img/rock.PNG.png" alt="" class="img"></div>
+                </div>
+                <!-- fin de la partie PiFeCi -->
+                <!-- Début de la partie boîte -->
+                <div class="flexBox2">
+                    <div id="droppable">
+                        <p class="h7 light">Glisser / Déposer</p>
+                    </div>
+                    <div class="colorOrange h3">vs</div>
+                    <div id="randomBlock" class="box2"></div>
+                </div>
+                <!-- fin de la partie boîte -->
+                <div class="resultat text-center text-white sizeDiv">A vous de jouer !!!</div>
+                <!-- Début des deux modales règles et origines -->
+                <div class="container-fluid rem6">
+                    <div class="row end mb-2">
+                        <div type="button" name="button" id="tryAgain" class="btnReglesOrigins py-1 px-2 btn2Padding">
+                            Rejouer</div>
+                        <!-- Bouton Règles -->
+                        <div type="button" class="btnReglesOrigins py-1 px-2 btn2Padding" data-toggle="modal"
+                            data-target="#rules">Règles
+                        </div>
+                        <!-- Modal Règles -->
+                        <div class="modal fade" id="rules" tabindex="-1" aria-labelledby="originsLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" id="modaleRules">
+
+                                    <div class="modalBigTitle text-center">Règles du jeu Pierre Feuille Ciseaux
+                                    </div>
+
+                                    <div class="modal-body text-white   text-center">
+                                        <p class="par">Les règles du jeu sont vraiment très simples et vous n’avez
+                                            besoin de rien pour jouer, si ce n’est que vos mains. Comme il existe
+                                            plusieurs variantes, voici les règles de la version classique du shifumi qui
+                                            se joue à 2 joueurs. À l’aide de vos mains, vous aurez la possibilité de
+                                            choisir entre 3 signes : la pierre, le papier ou les ciseaux.</p>
+                                    </div>
+
+                                    <div class="modalTitle text-center mb-3">Pierre Feuille Ciseaux en occident ?
+                                    </div>
+
+                                    <div class="text-white text-center">
+                                        <p class="par">Les 2 joueurs doivent placer leurs mains dans le dos.</p>
+                                        <p>Prononcez Shi Fu Mi (se prononce Chi Fou Mi) ou comptez jusqu’à 3.</p>
+                                        <p>Dévoilez votre choix en réalisant le signe avec votre main.</p>
+                                    </div>
+
+                                    <div class="modalTitle text-center mb-3">Une fois que les deux joueurs ont dévoilés leurs signes voici comment est déterminé le gagnant :
+                                    </div>
+
+
+                                    <div class="text-white text-center">
+                                        <p class="par"> La pierre casse les ciseaux, la pierre gagne contre les ciseaux.
+                                        </p>
+                                        <p class="par">Les ciseaux coupent le papier, les ciseaux gagnent contre le papier.</p>
+                                        <p class="par">Le papier recouvre la pierre, le papier gagne contre la pierre.</p>
+                                        <p class="par">En cas d’égalité vous rejouez jusqu’à ce qu’il y ait un gagnant.</p>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn buttonReturn"
+                                            data-dismiss="modal">Retour</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bouton Origines -->
+                        <div type="button" class="btnReglesOrigins py-1 px-2   btn2Padding" data-toggle="modal"
+                            data-target="#origins">Origines
+                        </div>
+                        <!-- Modal Origines -->
+                        <div class="modal fade" id="origins" tabindex="-1" aria-labelledby="originsLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" id="modaleOrigin">
+
+                                    <div class="modalBigTitle text-center">Origines du jeu Pierre Feuille Ciseaux
+                                    </div>
+
+                                    <div class="modal-body text-white   text-center">
+                                        <p class="par"> Quelles sont les origines du jeu Pierre Feuille Ciseaux ? Ou de
+                                            son autre appellation le jeu Shifumi ? Ce mécanisme de jeu existe sur
+                                            l’ensemble des continents ! Alors où puiser une origine historique pour un
+                                            jeu simple, mais terriblement efficace ! <br> Beaucoup d’éléments tente à
+                                            déterminer une origine non européenne, ni du moyen orient. Plus loin alors ?
+                                            Indienne ? Non, il faut voir plus loin : l’Asie.</p>
+                                    </div>
+
+                                    <div class="modalTitle text-center mb-3">Pierre Feuille Ciseaux en occident ?
+                                    </div>
+
+                                    <div class="text-white text-center">
+                                        <p class="par"> Les historiens font remonter l’apparition du pierre feuille
+                                            ciseaux en occident au 19e siècle. Le jeu a acquis cette popularité que l’on
+                                            chante à travers les pages de notre site, et à travers le monde à partir de
+                                            cette époque. son origine est plus ancienne. <br>
+                                            Il n’y a aucune trace de Chi Fou Mi en Occident avant qu’il n’y ait
+                                            d’échanges modernes avec l’Asie. D’ailleurs les auteurs occidentaux de la
+                                            fin du XIXè siècle l’ont mentionné comme un jeu asiatique.</p>
+                                    </div>
+
+                                    <div class="modalTitle text-center mb-3">Regardons du côté du japon, l’origine du
+                                        Shifumi ?
+                                    </div>
+
+
+                                    <div class="text-white text-center">
+                                        <p class="par"> Rapidement, voir automatiquement, nos pensées se tournent vers
+                                            le japon. C’est d’ailleurs là que l’on retrouve le Jan-ken-pon ( じゃんけんぽん),
+                                            appelé également Janken (じゃ んけん). <br>
+                                            En fonction des pays, il est aussi traduit via des expressions comme
+                                            Jankenpyon, Janken-pon... appelé parfois ishiken (いしけん, « pierre poing »),
+                                            encore sous le nom de pierre-papier-ciseau en occident est un des jeux les
+                                            plus populaires et le plus connu des jeux qui n’utilisent que les
+                                            mains/poings, connu sous le nom de « jeu de ken (poing) » (拳 遊び, ken asobi).
+                                            <br>
+                                            Au Japon, le jeu semble être arrivé au XVIIe siècle venant d’un autre pays.
+                                        </p>
+                                    </div>
+
+                                    <div class="modalTitle text-center mb-3">Pierre Feuille Ciseaux : des origines
+                                        asiatiques
+                                    </div>
+
+                                    <div class="text-white text-center">
+                                        <p class="par"> Chi Fou Mi fut manifestement inventé en Chine. Selon un livre
+                                            écrit par Xiè Zhàozhì et nommé Wuzazu (五杂组 / 五雜組 (ou Wǔzázǔ ou 五雜 俎), les
+                                            seigneurs de la dynastie Han (206 av. J. -C. à 220 apr. J.-C) jouaient à un
+                                            jeu considéré comme le Chi Fou Mi. <br>
+
+                                            il semble que c’était d’ailleurs un jeu à boire nomé shoushìlìng (手勢令) <br>
+
+                                            Néanmoins, les Chinois utilisaient l’objet “tissu” avec la “pierre” et les
+                                            “ciseaux”, alors que les Japonais l’ont renommé “feuille”. D’autre part, le
+                                            nom Chi Fou Mi est sans doute issu du japonais Hi Fu Mi (Un deux trois). Les
+                                            commentaires donnent plus d’explications concernant le nom Shi Fu Mi. <br>
+
+                                            Si la Chine a inventé et diffusé localement le Pierre Feuille Ciseaux, c’est
+                                            l’occident qui l’a diffusé massivement en développant librement ou par la
+                                            force les échanges commerciaux au XIXe siècle. On peut y voir une autre
+                                            forme de mondialisation.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn buttonReturn"
+                                            data-dismiss="modal">Retour</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <!-- <script src="assets/js/jquery-3.5.1.min.js"></script> -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
